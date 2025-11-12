@@ -11,12 +11,17 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Hello Flutter'),
-        ),
-        body: const Center(
-          child: Text('Welcome to Flutter!'),
-        ),
+        backgroundColor: Colors.teal,
+        body: SafeArea(
+          child: Container(
+            height: 150.0,
+            width: 150.0,
+            margin: EdgeInsets.all( 50.0 ),
+            padding: EdgeInsets.all( 20.0 ),
+            color: Colors.white,
+            child: Text('Hello Praderm'),
+          ),
+        )
       ),
     );
   }
