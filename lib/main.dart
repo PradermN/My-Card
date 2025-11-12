@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,23 +15,29 @@ class MyApp extends StatelessWidget {
         backgroundColor: Colors.teal,
         body: SafeArea(
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              Container(
-                height: 150.0,
-                width: 150.0,
-                margin: EdgeInsets.all(50.0),
-                padding: EdgeInsets.all(20.0),
-                color: Colors.blue,
-                child: Text('Container 1'),
+              CircleAvatar(
+                radius: 50.0,
+                backgroundImage: AssetImage('images/profile.jpg'),
               ),
-              Container(
-                height: 150.0,
-                width: 150.0,
-                margin: EdgeInsets.all(50.0),
-                padding: EdgeInsets.all(20.0),
-                color: Colors.red,
-                child: Text('Container 2'),
+              Text(
+                'Praderm Nafack',
+                style: TextStyle(
+                  fontFamily: 'Pacifico',
+                  fontSize: 20.0,
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              Text(
+                'FLUTTER DEVELOPER',
+                style: TextStyle(
+                  fontFamily: 'SourceSansPro',
+                  color: Colors.teal.shade100,
+                  fontSize: 15.0,
+                  letterSpacing: 2.0,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
             ],
           ),
