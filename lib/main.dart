@@ -10,10 +10,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
         backgroundColor: Colors.teal,
         body: SafeArea(
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               CircleAvatar(
                 radius: 50.0,
@@ -38,52 +40,62 @@ class MyApp extends StatelessWidget {
                   fontWeight: FontWeight.bold,
                 ),
               ),
-              Container(
-                padding: EdgeInsets.all(10.0),
+              SizedBox(
+                height: 30.0,
+                width: 150.0,
+                child: Divider(
+                  color: Colors.teal.shade100,
+                ),
+              ),
+              Card(
                 margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
-                color: Colors.white,
-                child: Row(
-                  children: <Widget>[
-                    Icon(
+                child: ListTile(
+                  leading: Icon(
                       Icons.phone,
                       color: Colors.teal,
-                    ),
-                    SizedBox(
-                      width: 20.0,
-                    ),
-                    Text(
+                  ),
+                  title: Text(
                       '+49 176 53973728',
                       style: TextStyle(
                         color: Colors.teal.shade900,
                         fontFamily: 'SourceSansPro',
                         fontSize: 20.0,
                       ),
-                    )
-                  ],
-                ),
+                  ),
+                )
               ),
-              Container(
-                padding: EdgeInsets.all(10.0),
+              Card(
                 margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
-                color: Colors.white,
-                child: Row(
-                  children: <Widget>[
-                    Icon(
+                child: ListTile(
+                  leading: Icon(
                       Icons.email,
                       color: Colors.teal,
-                    ),
-                    SizedBox(
-                      width: 20.0,
-                    ),
-                    Text(
+                  ),
+                  title: Text(
                       'Praderm23749@gmail.com',
                       style: TextStyle(
                         color: Colors.teal.shade900,
                         fontFamily: 'SourceSansPro',
                         fontSize: 20.0,
                       ),
-                    )
-                  ],
+                  ),
+                ),
+              ),
+              Card(
+                margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
+                child: ListTile(
+                  leading: Icon(
+                      Icons.location_on,
+                      color: Colors.teal,
+                  ),
+                  title: Text(
+                      'Lübeck, Germany',
+                      style: TextStyle(
+                        color: Colors.teal.shade900,
+                        fontFamily: 'SourceSansPro',
+                        fontSize: 20.0,
+                      ),
+                  ),
                 ),
               ),
             ],
